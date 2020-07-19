@@ -7,33 +7,51 @@
 
     <style>
      * {
-         box-sizing: border-box;
-         margin: 0;
+        box-sizing: border-box;
+        margin: 0;
+        max-width: 3570px;
      }
 
+    a {
+        text-decoration: none;
+        color: black;
+    }
      i {
          cursor: pointer;
         }
-        
+    
+
+    li {
+        list-style: none;
+        padding: 0;
+        margin:0;
+    }
+
+        /* 시작/어사이드 */
+
+    #aside {
+        background-color: rgb(247,247,247);
+    }
+    
     .aside__text {
-        text-align: center;
         padding: 20px;
         font-size: 14px;
         font-weight: 800;
         color: black;
         text-decoration: underline;
-        background-color: rgb(247,247,247);
         cursor: pointer;
+        position: relative;
+        left: 39%;
     }
      
     .wrap {
-        margin: 0 10px;
+        margin: 0 140px;
     }
     
     /* 헤더 시작 로고 */
    
     #header {
-        padding: 20px 80px;
+        padding: 20px 0;
         display: flex;
         justify-content: space-between;
     }
@@ -60,7 +78,7 @@
     }
 
     .logoright__local  {
-        padding: 10px 13px 0 13px;
+        padding: 10px 12px;
         cursor: pointer;
     }
 
@@ -88,10 +106,6 @@
 
     /* 넷바 */
 
-    #nav {
-        padding: 0 80px;
-    }
-    
     .navbar__menu {
         padding: 32px 0 23px 0;
         display: flex;
@@ -106,6 +120,17 @@
         color:rgba(0,0,0,0.6);
     }
 
+    .navbar__menu-item:nth-child(4)::after {
+        content: "New";
+        background-color: black;
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 2px 5px;
+        border-radius: 5px;
+        margin-left: 6px;
+    }
+
 
     /* 서치바 */
 
@@ -113,6 +138,7 @@
         display: flex;
         border: 1px solid #bdc3c7;
         border-radius: 15px;
+        box-shadow: 1px 1px 1px 1px rgb(247,247,247);
         cursor: pointer;
     }
 
@@ -120,8 +146,9 @@
         flex: 1;
     }
 
-    .search-box {
-        padding: 16px 24px;
+    .search-box,
+    .search-box-location {
+        padding: 13px 24px;
         border-right: 1px solid rgba(189,195,199,.3);
         width: 20%;
     }
@@ -138,7 +165,7 @@
 
     .search__textdet {
         font-size: 13.3px;
-        margin-top: 6px;
+        margin-top: 9px;
         color: rgb(117,117,117);
     }
 
@@ -160,7 +187,7 @@
     }
 
     .search__btn {
-        padding: 15px 25px;
+        padding: 13px 25px;
         background-color: #EE265B;
         border-radius: 15px;
         color:white;
@@ -171,16 +198,191 @@
         padding-right: 8px;
     }
 
+/* 컨텐츠 */
+
+    .title {
+        margin: 60px 0;
+        font-size: 23px;
+        color: #EE265B;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content__menu {
+        width: 32.7%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .content__menu-det {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border: 1px solid rgba(0,0,0,0.2);
+        padding: 8px;
+        line-height: 30px;
+        width: 100%;
+    }
+
+    .content__menu-img {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        margin-bottom: -10px;
+
+    }
+
+    .content__menu-href {
+        text-decoration: none;
+        color: black;
+    }
+
+    .content__menu-href > p {
+        font-size: 12px;
+        color: rgba(0,0,0,0.6);
+    }
+    
+    /* 아티클 */
+
+    .article {
+        background-color: black;
+        color: white;
+        position: relative;
+        margin-top: 80px;
+    }
+
+    .article__header {
+        margin: 0 140px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    .article__view-btn {
+        padding: 6px 10px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 7px;
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+    }
+
+
+    .article__text > p {
+        margin-top: 6px;
+        font-size: 12px;
+    }
+
+    .article__container {
+        margin: 0 140px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .article__main {
+        padding: 30px 0;
+        cursor: pointer;
+    }
+
+    .article__main:nth-child(1) {
+        align-self: center; 
+        padding-right: 20px;
+    }
+
+    .article__main-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .article__main-img {
+        border-top-right-radius: 14px;
+        border-top-left-radius: 14px;
+    }
+
+    .article__main-text {
+        background-color: rgb(34,34,34);
+        margin-top: -3px;
+        padding: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .article__main-text > p {
+        font-size: 12px;
+    }
+
+    .info {
+        display: flex;
+    }
+
+    .bear__info {
+        padding: 40px;
+        width: 50%;
+    
+    }
+
+    .bear__info-btn {
+        margin-top: 20px;
+        background-color:unset;
+        outline: none;
+        border: 1px solid rgba(0,0,0,0.5);
+        border-radius: 8px;
+        padding: 5px 12px;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    .bear__info-btn:hover {
+        background-color: rgba(178, 190, 195, .1);
+    }
+    .bear__info-text {
+        padding: 40px;
+        width: 50%;
+    }
+
+    /* 푸터 */
+
+    #footer {
+        border-top:1px solid rgba(178, 190, 195, .7);
+        display: flex;
+        padding: 30px 0;
+        margin: 0px 140px;
+    }
+
+    #footer > ul {
+        width: 25%;
+        font-size: 12px;
+        padding-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    #footer > ul > a > li {
+        padding: 2px 0;
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 13px;
+    }
+
+    #footer > ul > a > li:hover {
+        text-decoration: underline;
+    }
+
 </style>
 </head>
 <body>
     <aside id="aside">
         <div class="aside__text">
-            베어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.         
+           베어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.     
         </div>
     </aside>
-  <div class="wrap">
 
+  <div class="wrap">
       <header id="header">
           <div class="logo"><i class="fab fa-airbnb"></i>BearBnB</div>
           <div class="logoright">
@@ -226,12 +428,199 @@
                 <div class="search-box-btn">
                     <button class="search__btn">
                         <i class="fas fa-search"></i>검색</button>
+                    </div>
+                </div>
+            </nav>
+            
+            <section class="section">
+                <div class="title">    
+                    <h3>이제 가까운 곳에서 소중한 것들을 찾아보세요.</h3>
+                </div>
+                <div class="content">
+                <div class="content__menu">
+                    <img src="images/online.jpg" class="content__menu-img" width="100%">
+                    <div class="content__menu-det">
+                        <a href="" class="content__menu-href">
+                            <h4>온라인 체험</h4>
+                            <p>세계 각지의 호스트가 진행하고 모두 함께 즐기는 독특한 액티비티</p>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="content__menu">
+                        <img src="images/travel.jpg" class="content__menu-img" width="100%">
+                        <div class="content__menu-det">
+                            <a href="" class="content__menu-href">
+                                <h4>가까운 여행지</h4>
+                                <p>자동차로 금방 다녀올 수 있는 근교 여행지에서 휴식을 즐기세요</p>
+                            </a>
+                    </div>
+                    
+                </div>
+                <div class="content__menu">
+                    <img src="images/home.jpg" class="content__menu-img" width="100%">
+                    <div class="content__menu-det">
+                        <a href="" class="content__menu-href">
+                            <h4>집 전체</h4>
+                            <p>일행만을 위한 편안한 공간에서 친구 및 가족과 오붓한 시간을 보내세요.</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+            <article class="article">
+                <div class="article__header">
+                <div class="article__text">
+                    <h2>최고의 셰프와 함께하는 온라인 체험</h2>
+                    <p>요리계의 전설과 함께하면서 요리의 숨겨진 뒷이야기를<br>
+                        들어보세요. 개성 있는 호스트가 진행하는 특별한 활동에<br>
+                        참여하면서 이제 집에서도 안전하게 체험을 즐기실 수 있습니다.</p>
+                    </div>
+                    <div class="article__view">
+                        <button class="article__view-btn">모두 둘러보기</button>
+                    </div>
+                </div>
+
+                <div class="article__container">
+                    
+                    <div class="article__main">
+                        <img src="images/le-creuset-fFlICF89xz0-unsplash.jpg" 
+                        width="100%" alt="" class="article__main-img">
+                        <div class="article__main-text">
+                            <h5>미슐랭 셰프 수 안과 함께하는<br>푸드 페어링과 플레이팅</h5>
+                        </div>
+                    </div>
+
+                    <div class="article__main-right">
+
+                        <div class="article__main">
+                            <img src="images/hemant-latawa-RKdkETvcYn4-unsplash.jpg" 
+                            width="100%" alt="" class="article__main-img">
+                            <div class="article__main-text">
+                                <h5>런던의 스타 셰프 아테아 스티븐슨과 함께<br> 제철 요리 만들기</h5>
+                            </div>
+                        </div>
+                        
+                        <div class="article__main">
+                            <img src="images/jesus-terres-tUsnpRj0NYE-unsplash.jpg" 
+                            width="100%" alt="" class="article__main-img">
+                            <div class="article__main-text">
+                                <h5>미슐랭 셰프 마크 파비에르와 함께하는<br> 해산물 요리</h5>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+                    
+                </article>
+            </section>
         
-    <script defer src="https://kit.fontawesome.com/66fd1dbf65.js" crossorigin="anonymous"> </script>
+            <div class="wrap">
+                <div class="info">
+                        <div class="bear__info">
+                            <h2>구호 인력 호스팅: 세계 각지의<br>
+                                구호인력에게<br>
+                                숙소를 제공하세요.</h2>
+                                <button class="bear__info-btn">동참하기</button>
+                        </div>
+                            
+                            <div class="bear__info-text">
+                                <small>
+                                    코로나19와 맞서 싸우는 보건의료 인력, 긴급 구호 요원,<br> 
+                                    응급 구조 요원 등 10만 명에게 임시 숙소를 제공하는 <br>
+                                    '구호 인력을 위한 숙소' 프로그램에 에어비앤비 호스트 <br>
+                                    여러분의 참여를 부탁드립니다. 이는 감염 노출 위험이 있는 <br>
+                                    구호 인력에게 병원과 가까우면서도 가족과 떨어져 안전하게 <br>
+                                    머물 수 있는 숙소를 제공하기 위한 것입니다.
+                                </small>
+                            </div>
+                </div>
+            </div>
+                    
+            <div id="footer">
+                <ul class="footer__info">소개
+                    <a href="">
+                        <li class="footer__info-intro">베어비앤비 이용 방법</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__info-intro">다양성 및 소속감</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__info-intro">접근성</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__info-intro">신뢰와 안전</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__info-intro">BearBnB Citizen</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__info-intro">올림픽</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__info-intro">뉴스룸</li>
+                    </a>
+                </ul>
+                <ul class="footer__comu">커뮤니티
+                    <a href="">
+                        <li class="footer__comu-intro">베어비앤비 매거진</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__comu-intro">베어비앤비 어소시에이트</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__comu-intro">에어비앤비 비즈니스 프로그램</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__comu-intro">친구 초대하기</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__comu-intro">채용정보</li>
+                    </a>
+                </ul>
+
+                <ul class="footer__host">호스팅하기
+                    <a href="">
+                        <li class="footer__host-intro">숙소 호스팅</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__host-intro">온라인 체험 호스팅하기</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__host-intro">참외 CEO의 메시지</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__host-intro">책임감 있는 호스팅</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__host-intro">Open Homes</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__host-intro">자료 센터</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__host-intro">커뮤니티 센터</li>
+                    </a>
+                </ul>
+
+                <ul class="footer__supp">베어비앤비 지원
+                    <a href="">
+                        <li class="footer__supp-intro">코로나19 관련 업데이트</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__supp-intro">도움말 센터</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__supp-intro">예약 취소 옵션</li>
+                    </a>
+                    <a href="">
+                        <li class="footer__supp-intro">베어비앤비 이웃 민원 지원</li>
+                    </a>
+                </ul>
+            </div>
+
+
+                <script defer src="https://kit.fontawesome.com/66fd1dbf65.js" crossorigin="anonymous"> </script>
     
 </body>
 </html>
