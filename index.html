@@ -7,94 +7,195 @@
 
     <style>
      * {
-         margin: 0;
          box-sizing: border-box;
+         margin: 0;
      }
 
-     .logo__text {
+     i {
+         cursor: pointer;
+        }
+        
+    .aside__text {
         text-align: center;
         padding: 20px;
         font-size: 14px;
         font-weight: 800;
         color: black;
         text-decoration: underline;
+        background-color: rgb(247,247,247);
+        cursor: pointer;
     }
-
+     
+    .wrap {
+        margin: 0 10px;
+    }
+    
+    /* 헤더 시작 로고 */
+   
     #header {
-        padding: 0 40px;
+        padding: 20px 80px;
         display: flex;
         justify-content: space-between;
     }
-    
+
+
+    /* 로고 */
+
+    .logo {
+        font-size: 25px;
+        color:rgb(255,56,92);
+        font-weight: 700;
+        cursor: pointer;
+    }
+   
+    .logo > i{
+        font-weight: 700;
+        padding-right: 7px;
+    }
+
+    /* 로고 오른쪽 로컬/로그인바 */
+
     .logoright {
         display: flex;
     }
 
+    .logoright__local  {
+        padding: 10px 13px 0 13px;
+        cursor: pointer;
+    }
+
+    .logoright__local:hover {
+        background-color: rgba(178, 190, 195,.1);
+        border-radius: 20px;
+    }
+
     .logoright__login {
         border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 40px;
+        padding: 10px;
         margin-left: 10px;
     }
 
+    .logoright__login > i {
+        font-size: 18px;
+        text-align: center;
+        width: 30px;
+    }
+
+    .logoright__login:hover {
+        box-shadow: 1px 1px 1px 1px rgba(178, 190, 195, .3);
+    }
+
+    /* 넷바 */
+
     #nav {
-        padding: 0 40px;
+        padding: 0 80px;
     }
     
     .navbar__menu {
-        padding: 32px 0 16px 0;
+        padding: 32px 0 23px 0;
         display: flex;
     }
 
     .navbar__menu-item {
+        cursor: pointer;
         padding-right: 20px;
     }
 
+    .navbar__menu-item:hover {
+        color:rgba(0,0,0,0.6);
+    }
+
+
+    /* 서치바 */
+
     .search {
-        width: 100%;
-        display: block;
-        padding: 10px 0;
+        display: flex;
         border: 1px solid #bdc3c7;
         border-radius: 15px;
+        cursor: pointer;
     }
-    .search__location,
-    .search__check,
-    .search__btn {
+
+    .search-box-location {
+        flex: 1;
+    }
+
+    .search-box {
         padding: 16px 24px;
+        border-right: 1px solid rgba(189,195,199,.3);
+        width: 20%;
+    }
+    
+    .search-box:nth-child(4) {
+        border-right: none;
+    }
+
+    .search__text {
+        font-size: 10px;
+        margin-bottom: 4px;
+        font-weight: 700;
+    }
+
+    .search__textdet {
+        font-size: 13.3px;
+        margin-top: 6px;
+        color: rgb(117,117,117);
+    }
+
+    .search__location,
+    .search__btn {
+        width: 100%;
         border: none;
         outline: none;
-        border: 1px solid black;
     }
 
-    .search__location {
-        width: 40%;
+    /* 자바스크립트 추가 클래스 */
+    .search__hover-border {
+        border-radius: 16px;
     }
-    .search__check {
-        width: 15.5%;
+    /*  */
+
+    .search-box-btn {
+        padding: 10px;
     }
 
     .search__btn {
-        width: 10%;
-        background-color: red;
-        color: white;
-        font-size: 16px;
+        padding: 15px 25px;
+        background-color: #EE265B;
         border-radius: 15px;
+        color:white;
+        font-size: 16px;
+        cursor: pointer;
     }
+    .search__btn > i {
+        padding-right: 8px;
+    }
+
 </style>
 </head>
 <body>
     <aside id="aside">
-        <div class="logo__text">
+        <div class="aside__text">
             베어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.         
         </div>
     </aside>
-  
-    <header id="header">
-        <div class="logo">Bear!</div>
-        <div class="logoright">
-            <div class="logoright__local">지</div>
-            <div class="logoright__login">햄벅바/로그인메뉴</div>
+  <div class="wrap">
+
+      <header id="header">
+          <div class="logo"><i class="fab fa-airbnb"></i>BearBnB</div>
+          <div class="logoright">
+              <div class="logoright__local">
+                  <i class="fas fa-globe"></i>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                
+                <div class="logoright__login">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-user-tie"></i>
+                </div>
             </div>
-    </header>
-    <nav id="nav">
+        </header>
+        <nav id="nav">
             <div class="navbar__menu">
                 <div class="navbar__menu-item">숙소</div>
                 <div class="navbar__menu-item">장기 숙박</div>
@@ -102,12 +203,35 @@
                 <div class="navbar__menu-item">온라인 체험</div>
             </div>
             <div class="search">
-                <input type="text" class="search__location" placeholder="위치" >
-                <input type="text" class="search__check">
-                <input type="text" class="search__check">
-                <input type="text" class="search__check">
-                <button class="search__btn">ㅁ검색</button>
+                
+                <div class="search-box search-box-location">
+                    <div class="search__text">위치</div>
+                    <input type="text" class="search__location" placeholder="어디로 여행가세요?" >
+                </div>
+                
+                <div class="search-box">
+                    <div class="search__text">체크인</div>
+                    <div class="search__textdet">날짜 추가</div>
+                </div>
+                
+                <div class="search-box">
+                    <div class="search__text">체크아웃</div>
+                    <div class="search__textdet">날짜 추가</div>
+                </div>
+                
+                <div class="search-box">
+                    <div class="search__text">인원</div>
+                    <div class="search__textdet">게스트 추가</div>
+                </div>
+                <div class="search-box-btn">
+                    <button class="search__btn">
+                        <i class="fas fa-search"></i>검색</button>
+                </div>
             </div>
-    </nav>
-    </body>
+        </nav>
+    </div>
+        
+    <script defer src="https://kit.fontawesome.com/66fd1dbf65.js" crossorigin="anonymous"> </script>
+    
+</body>
 </html>
