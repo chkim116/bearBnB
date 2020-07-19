@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙소, 체험, 장소를 모두 한 곳에서 - 베어비엔비</title>
+
+    <style>
+     * {
+         margin: 0;
+         box-sizing: border-box;
+     }
+
+     .logo__text {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        font-weight: 800;
+        color: black;
+        text-decoration: underline;
+    }
+
+    #header {
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logoright {
+        display: flex;
+    }
+
+    .logoright__login {
+        border: 1px solid rgba(0,0,0,0.2);
+        margin-left: 10px;
+    }
+
+    #nav {
+        padding: 0 40px;
+    }
+    
+    .navbar__menu {
+        padding: 32px 0 16px 0;
+        display: flex;
+    }
+
+    .navbar__menu-item {
+        padding-right: 20px;
+    }
+
+    .search {
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+        border: 1px solid #bdc3c7;
+        border-radius: 15px;
+    }
+    .search__location,
+    .search__check,
+    .search__btn {
+        padding: 16px 24px;
+        border: none;
+        outline: none;
+        border: 1px solid black;
+    }
+
+    .search__location {
+        width: 40%;
+    }
+    .search__check {
+        width: 15.5%;
+    }
+
+    .search__btn {
+        width: 10%;
+        background-color: red;
+        color: white;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+</style>
+</head>
+<body>
+    <aside id="aside">
+        <div class="logo__text">
+            베어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.         
+        </div>
+    </aside>
+  
+    <header id="header">
+        <div class="logo">Bear!</div>
+        <div class="logoright">
+            <div class="logoright__local">지</div>
+            <div class="logoright__login">햄벅바/로그인메뉴</div>
+            </div>
+    </header>
+    <nav id="nav">
+            <div class="navbar__menu">
+                <div class="navbar__menu-item">숙소</div>
+                <div class="navbar__menu-item">장기 숙박</div>
+                <div class="navbar__menu-item">체험</div>
+                <div class="navbar__menu-item">온라인 체험</div>
+            </div>
+            <div class="search">
+                <input type="text" class="search__location" placeholder="위치" >
+                <input type="text" class="search__check">
+                <input type="text" class="search__check">
+                <input type="text" class="search__check">
+                <button class="search__btn">ㅁ검색</button>
+            </div>
+    </nav>
+    </body>
+</html>
