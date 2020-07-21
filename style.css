@@ -11,7 +11,10 @@ a {
      cursor: pointer;
     }
 
-
+ul {
+    padding: 0;
+    margin: 0;
+}
 li {
     list-style: none;
     padding: 0;
@@ -353,21 +356,21 @@ li {
     display: flex;
     padding: 30px 0;
     background-color: rgba(178, 190, 195,.2);
+    
 }
 
 #footer > ul {
-    width: 25%;
+    width: 100%;
     font-size: 12px;
     padding-bottom: 20px;
-    margin: 0px 8%;   
     font-weight: 700;
+    padding-left: 8%;
 }
 
 #footer > ul > a > li {
-    padding: 2px 0;
+    margin-top: 13px;
     font-size: 13px;
     font-weight: 400;
-    margin-top: 13px;
 }
 
 #footer > ul > a > li:hover {
@@ -378,6 +381,25 @@ li {
     display: none;
 }
 
+
+
+@media all and (max-width:1024px) {
+    .aside__text {
+        left: 23%;
+        font-size: 0.8rem;
+    }
+
+    #footer > ul {
+        padding-left: 8%;
+        padding-bottom: 0;
+        cursor: pointer;
+
+    }
+
+    #footer > ul > a >li {
+        display: none;
+
+    }
 
 @media all and (max-width:768px) {
     .wrap,
@@ -472,15 +494,19 @@ li {
 
     #footer {
         flex-direction: column;
-        margin: 0;
+        padding: 0px;
     }
 
     #footer > ul {
         width: 100%;
         border-bottom: 1px solid rgba(178, 190, 195, .7);
-        margin: 0;
-        margin-bottom: 20px;
+        padding: 20px 0 30px 8%;
     }
+   
+    #footer > ul > a >li {
+        display: block;
+    }
+    
 
     .navbar__bottom {
         width: 100%;
@@ -515,7 +541,6 @@ li {
     }
 }
 
-
 @media all and (max-width:476px) {
 
     .aside__text {
@@ -524,7 +549,7 @@ li {
 
     .content {
         position: relative;
-        padding-bottom: 100%;
+        padding-bottom: 90%;
         overflow: hidden;
     }
     
@@ -538,6 +563,10 @@ li {
 
     .menu__slide3 {
         left: 200%;
+    }
+
+    .article__view-btn {
+        display: none;
     }
 
     .article__view-bottom {
@@ -555,6 +584,9 @@ li {
         cursor: pointer;
         outline: none;
     }
-    
+ 
+    #footer {
+        padding-bottom: 70px;
+    }
 
 }
