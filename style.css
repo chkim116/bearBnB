@@ -29,14 +29,13 @@ li {
 
 .aside__text {
     padding: 20px;
+    margin: 0 auto;
     font-size: 14px;
     font-weight: 800;
     color: black;
     text-decoration: underline;
     cursor: pointer;
-    position: relative;
     width: fit-content;
-    left: 37%;
 }
  
 .wrap {
@@ -59,7 +58,7 @@ li {
     color:rgb(255,56,92);
     font-weight: 700;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 .logo > i{
@@ -385,11 +384,6 @@ li {
 
 
 @media all and (max-width:1024px) {
-    .aside__text {
-        left: 23%;
-        font-size: 0.8rem;
-    }
-
     #footer > ul {
         padding-left: 8%;
         padding-bottom: 0;
@@ -408,10 +402,6 @@ li {
     .article__container {
         margin: 0 2.5%;
 }
-    .aside__text {
-        left: 20%;
-        font-size: 0.8rem;
-    }
 
     .navbar__menu,   
     .search-box,
