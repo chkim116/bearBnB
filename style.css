@@ -126,7 +126,6 @@ li {
     margin-left: 6px;
 }
 
-
 /* 서치바 */
 
 .search {
@@ -563,6 +562,7 @@ li {
     .article__view-bottom {
         padding: 15px;
     }
+    
     .article__view-btn-bottom {
         display: block;
         padding: 6px 10px;
@@ -580,4 +580,5 @@ li {
         padding-bottom: 70px;
     }
 
+}
 }
