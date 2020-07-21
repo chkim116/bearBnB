@@ -1,4 +1,7 @@
-// 어디로 여행가세요? 고정
+// 어디로 여행가세요? search-box-location 고정
+
+const searchLocation = document.querySelector(".search-box-location");
+
 
 // delbtn X 추가
 
