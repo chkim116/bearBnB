@@ -59,6 +59,7 @@ li {
     color:rgb(255,56,92);
     font-weight: 700;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .logo > i{
