@@ -46,7 +46,7 @@ function spanDel() {
     if (Number(view) > window.innerWidth) {
         searchForm.appendChild(span);
     } else { 
-        searchForm.removeChild(span);
+        span.parentNode.removeChild(span);
     }
 }
 
