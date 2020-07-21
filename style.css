@@ -400,20 +400,50 @@ li {
     .article__header,
     .article__container {
         margin: 0 2.5%;
-}
+    }       
 
     .navbar__menu,   
     .search-box,
     .search__btn,
-    .search__text {
+    .search__text,
+    #header {
         display: none;
+    }
+
+    .search {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .search.search-fixed {
+        position: fixed;
+        width: 95%;
+        top:-1%;
+        left: 2.5%;
+        box-shadow: none;
+        background-color: white;
+        z-index: 100;
+        padding: 4px 0;
     }
 
     .search-box-location {
         display: block;
         border: none;
         padding: 10px 10px;
-        display: flex;
+    }
+
+    .search__form > span {
+        position: absolute;
+        cursor: pointer;
+        z-index: 300;
+    }
+    
+    .search__form > span:hover {
+        color:red;
+    }
+
+    .title {
+        margin: 25px 0;
     }
 
     .content {
@@ -422,7 +452,7 @@ li {
 
     .content__menu {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 70px;
     }
 
     .article__container {
@@ -511,7 +541,7 @@ li {
 
     .navbar__bottomenu {
         cursor: pointer;
-        margin-right: 20px;
+        margin: 0 10px;
     }
 
     .navbar__bottomenu:hover {
