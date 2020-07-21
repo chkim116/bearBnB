@@ -3,8 +3,6 @@ const searchLocation = document.querySelector(".search");
 const searchBox = document.querySelector(".search-box-location");
 const searchInput = searchBox.querySelector("input");
 
-
-
 const searchHeight = searchLocation.getBoundingClientRect().height;
 const asideHeight = aside.getBoundingClientRect().height;
 const headerHegihts = headerHegiht(asideHeight, searchHeight);
@@ -28,18 +26,15 @@ document.addEventListener("scroll", scrollLocation);
 
 
 // delbtn X 추가
-
 const searchForm = document.querySelector(".search__form");
 const delBtn = searchForm.querySelector("span");
-
+const view = "768";
+const span = document.createElement("span");
+span.innerText = "X";
 
 function delInput() {
     searchInput.value = "";
 }
-
-const view = "768";
-const span = document.createElement("span");
-span.innerText = "X";
 
 function spanDel() {
     
