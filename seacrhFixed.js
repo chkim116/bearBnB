@@ -40,8 +40,9 @@ function spanDel() {
     
     if (Number(view) > window.innerWidth) {
         searchForm.appendChild(span);
+        span.style.display ="inline";
     } else { 
-        span.parentNode.removeChild(span);
+        span.style.display ="none";
     }
 }
 
