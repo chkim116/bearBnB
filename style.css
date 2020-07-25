@@ -427,6 +427,7 @@ li {
       position: absolute;
       cursor: pointer;
       z-index: 300;
+      display: inline;
     }
 
     .search__form > span:hover {
