@@ -128,7 +128,7 @@ function searchCheck() {
   if (searchInput.value.length === 0) {
     alert("위치는요?");
   } else if (prevValue - nextValue > 0) {
-    alert("이전 날보다 앞의 날짜를 택해주세요");
+    alert("체크아웃 날짜를 확인하세요");
   } else if (prevValue - nextValue === 0) {
     alert("날짜와 인원을 체크해 주세요");
   } else if (num === 0) {
