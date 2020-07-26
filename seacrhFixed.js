@@ -27,7 +27,7 @@ document.addEventListener("scroll", scrollLocation);
 // delbtn X 추가
 const searchForm = document.querySelector(".search__form");
 const delBtn = searchForm.querySelector("span");
-const view = "768";
+const view = 768;
 const span = document.createElement("span");
 span.innerText = "X";
 
@@ -36,7 +36,7 @@ function delInput() {
 }
 
 function spanDel() {
-  if (Number(view) > window.innerWidth) {
+  if (view > window.innerWidth) {
     searchForm.appendChild(span);
     span.style.display = "inline";
   } else {

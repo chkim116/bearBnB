@@ -135,10 +135,8 @@ function searchCheck() {
     alert("인원 수 체크해 주세요");
   } else {
     location.href = "search.html";
-    hello.innerText = `${searchInput.value}`;
   }
 }
 
 const button = document.querySelector(".search__btn");
-const hello = document.querySelector(".hello");
 button.addEventListener("click", searchCheck);
