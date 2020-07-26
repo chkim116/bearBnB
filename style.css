@@ -21,6 +21,23 @@ li {
   margin: 0;
 }
 
+/* JQUERY */
+
+#ui-datepicker-div {
+  font-size: 15px;
+}
+.ui-datepicker-trigger {
+  cursor: pointer;
+}
+.hasDatepicker {
+  cursor: pointer;
+}
+
+.date__pick,
+.date__pick_late {
+  border: none;
+}
+
 /* 시작/어사이드 */
 
 #aside {
@@ -148,6 +165,7 @@ li {
 
 .search-box:nth-child(4) {
   border-right: none;
+  cursor: default;
 }
 
 .search__text {
@@ -160,6 +178,11 @@ li {
   font-size: 13.3px;
   margin-top: 9px;
   color: rgb(117, 117, 117);
+}
+
+.search__textdet > input {
+  outline: none;
+  width: 100%;
 }
 
 .search__location,
@@ -189,6 +212,17 @@ li {
 }
 .search__btn > i {
   padding-right: 8px;
+}
+
+/* 달력 캘린더 및 인원 추가 버튼 */
+
+#people__plus,
+#people__minus {
+  position: relative;
+  border: 1px solid black;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 /* 컨텐츠 */

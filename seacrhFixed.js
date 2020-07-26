@@ -49,8 +49,13 @@ window.addEventListener("resize", spanDel);
 // form에 제출하면 alert 알림창 보여주기
 function handleSubmit(event) {
   event.preventDefault();
-  alert(searchInput.value);
-  searchInput.value = "";
+  const input = searchInput.value;
+  if (input.length === 0) {
+    alert("위치는요?");
+  } else {
+    alert(searchInput.value);
+    searchInput.value = "";
+  }
 }
 
 searchForm.addEventListener("submit", handleSubmit);
