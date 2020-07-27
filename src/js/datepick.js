@@ -107,34 +107,40 @@ $(function () {
   });
 });
 
-let prevValue = 0;
-let nextValue = 0;
+// 서치바에 값이 다 들어와야 검색이 가능하게 만듦
+
+let prevDay = 0;
+let prevMonth = 0;
+let prevYear = 0;
+let nextDay = 0;
+let nextMonth = 0;
+let nextYear = 0;
 
 function prevDate(text, inst) {
-  const prevDay = parseInt(inst.selectedDay);
-  const prevMonth = inst.selectedMonth + 1;
-  const prevYear = inst.selectedYear;
-  return (prevValue = prevDay + prevMonth + prevYear);
+  return (
+    (prevDay = parseInt(inst.selectedDay)),
+    (prevMonth = inst.selectedMonth),
+    (prevYear = inst.selectedYear)
+  );
 }
-
 function nextDate(text, inst) {
-  const nextDay = parseInt(inst.selectedDay);
-  const nextMonth = inst.selectedMonth + 1;
-  const nextYear = inst.selectedYear;
-  return (nextValue = nextDay + nextMonth + nextYear);
+  return (
+    (nextDay = parseInt(inst.selectedDay)),
+    (nextMonth = inst.selectedMonth),
+    (nextYear = inst.selectedYear)
+  );
 }
+// 변수값에 할당해 날짜 차이를 비교
 
 function searchCheck() {
   if (searchInput.value.length === 0) {
     alert("위치는요?");
-  } else if (prevValue - nextValue > 0) {
+  } else if (prevYear > nextYear || prevMonth > nextDay || prevDay > nextDay) {
     alert("체크아웃 날짜를 확인하세요");
-  } else if (prevValue - nextValue === 0) {
-    alert("날짜와 인원을 체크해 주세요");
   } else if (num === 0) {
     alert("인원 수 체크해 주세요");
   } else {
-    location.href = "search.html";
+    location.href = "pages/search.html";
   }
 }
 
