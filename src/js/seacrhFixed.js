@@ -2,7 +2,7 @@ const aside = document.querySelector("#aside");
 const searchLocation = document.querySelector(".search");
 const searchBox = document.querySelector(".search-box-location");
 const searchInput = searchBox.querySelector("input");
-
+const searchForm = document.querySelector(".search__form");
 const searchHeight = searchLocation.getBoundingClientRect().height;
 const asideHeight = aside.getBoundingClientRect().height;
 const headerHegihts = headerHegiht(asideHeight, searchHeight);
