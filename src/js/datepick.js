@@ -140,7 +140,7 @@ function searchCheck() {
   } else if (num === 0) {
     alert("인원 수 체크해 주세요");
   } else {
-    location.href = "/pages/search.html";
+    location.href = "pages/search.html";
   }
 }
 
