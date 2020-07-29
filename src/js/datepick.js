@@ -135,7 +135,7 @@ function nextDate(text, inst) {
 function searchCheck() {
   if (searchInput.value.length === 0) {
     alert("위치는요?");
-  } else if (prevYear > nextYear || prevMonth > nextDay || prevDay > nextDay) {
+  } else if (prevYear > nextYear || prevMonth > nextMonth || prevDay > nextDay) {
     alert("체크아웃 날짜를 확인하세요");
   } else if (num === 0) {
     alert("인원 수 체크해 주세요");
